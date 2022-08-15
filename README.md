@@ -8,7 +8,7 @@ A C++ game simulating ants and wars between them, using SDL2 library
 
 In the folder containing Makefile run:
 
-```
+```bash
 make
 ```
 
@@ -18,7 +18,7 @@ A documentation will also be generated with this command
 
 ## How to run
 
-```
+```bash
 ./antwars [-s] game_file
 ```
 
@@ -36,7 +36,7 @@ Providing wrong path to the file or giving a file with a wrong format will cause
 
 In the folder containing Makefile run:
 
-```
+```bash
 make clean
 ```
 
