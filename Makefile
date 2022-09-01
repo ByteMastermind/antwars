@@ -3,7 +3,7 @@ LD = g++
 #CXXFLAGS = -std=c++17 -Wall -pedantic -Wno-long-long -O2 -Werror -Isrc/engine -Isrc/screen -Isrc/character -Isrc/file
 CXXFLAGS = -std=c++17 -Wall -pedantic -Wno-long-long -g -Werror -Isrc/engine -Isrc/screen -Isrc/character -Isrc/file # For debugging
 
-all: compile doc
+all: compile
 
 compile: main.o Engine.o Window.o Object.o Text.o Character.o Ant.o FAnthill.o EAnthill.o Obstacle.o File.o MapFile.o SaveFile.o
 	$(LD) $(CXXFLAGS) -o antwars $^ -lSDL2 -lSDL2_ttf
@@ -23,11 +23,8 @@ compile: main.o Engine.o Window.o Object.o Text.o Character.o Ant.o FAnthill.o E
 %.o: src/file/%.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-doc:
-	doxygen Doxyfile
-
 clean:
-	rm -rf *.o antwars doc
+	rm -rf *.o antwars
 
 run:
-	./benesm41 examples/map01
+	./antwars examples/map01

@@ -6,13 +6,13 @@
  *
  * \section install_sec Installation
  *
- *  run "make" inside the benesm41 folder
+ *  run "make" inside the antwars folder
  *
  * \section run How to run
  *
  * \subsection usage Usage
  *
- * ./benesm41 [-s] game_file
+ * ./antwars [-s] game_file
  *
  * game_file is the file of the game location
  * "-s" mode will load a game save file
@@ -89,14 +89,14 @@
 int main(int argc, char * argv[]) {
     if (argc != 2 && argc != 3) {
         std::cout << "Invalid number of arguments" << std::endl;
-        std::cout << "Usage: ./benesm41 [-s] gamefile" << std::endl;
+        std::cout << "Usage: ./antwars [-s] gamefile" << std::endl;
         return 1;
     }
     if (argc == 3) {
         std::string flag(argv[1]);
         if (flag != "-s") {
             std::cout << "Invalid number of arguments" << std::endl;
-            std::cout << "Usage: ./benesm41 [-s] gamefile" << std::endl;
+            std::cout << "Usage: ./antwars [-s] gamefile" << std::endl;
             return 1;
         }
     }
